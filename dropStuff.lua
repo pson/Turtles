@@ -1,7 +1,7 @@
 function refill(slot) 
     turtle.select(slot)
     if turtle.getItemCount() < 32 then -- Change 32 if you want to change max
-        for i=4,16 do
+        for i=slot+1,16 do
             if turtle.compareTo(i) then
                 turtle.select(i)
                 turtle.transferTo(slot)

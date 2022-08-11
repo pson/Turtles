@@ -4,7 +4,7 @@ function refill(slot)
     turtle.select(slot)
     if turtle.getItemCount() < 8 then
         for i=4,16,1 do
-            print("Comparing (" + i + ") to (" + slot + "): " + turtle.compareTo(i))
+            print("Comparing (", i, ") to (", slot, "): ", turtle.compareTo(i))
             if turtle.compareTo(i) then
                 turtle.select(i)
                 turtle.transferTo(slot)

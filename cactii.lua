@@ -32,13 +32,14 @@ end -- setup
 function main()
     local i
     setup()
-    while turtle.getItemCount(1) do
+    while turtle.getItemCount(1) == 0 do
         turtle.select(1)
         for i=1,4,1 do
             if turtle.detect() then
                 turtle.dig()
                 turtle.dropUp()
             end
+            turtle.turnRight()
         end
         sleep(15)
     end

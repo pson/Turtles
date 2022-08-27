@@ -1,4 +1,4 @@
--- Slot 1-4 One each of the sugarcane/cactii/something else that behave
+-- Slot 1-4 One each of the sugarcane/bamboo/something else that behave
 -- the same way
 -- Slot 15 the chest/drawer that will take the harvest
 -- The turtle will rotate four times while, planting the slots 1-4.
@@ -31,7 +31,9 @@ end -- setup
 
 function main()
     local i
-    setup()
+    if turtle.getItemCount(1) > 0 then
+        setup()
+    end
     while turtle.getItemCount(1) == 0 do
         turtle.select(1)
         for i=1,4,1 do

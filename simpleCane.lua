@@ -5,6 +5,9 @@
 -- After that it will raise one space, put the chest above itself,
 -- and start harvesting (rotating and digging)
 
+-- If you want it to restart any time re the instance do, name
+-- the program "startup".
+
 function setup()
     local i 
     if turtle.getFuelLevel() == 0 then
